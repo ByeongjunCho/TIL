@@ -5,7 +5,7 @@
 1. 저장
 
    ```python
-   # 저장은 =을 통해서 한다.
+   # 저장은 = 을 통해서 한다.
    dust = 64 # 숫자(interger)
    name = '홍길동' # 문자열(string)
    is_summer = True # 참/거짓, Boolearn(True/False)
