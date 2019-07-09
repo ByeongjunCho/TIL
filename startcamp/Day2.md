@@ -29,11 +29,15 @@
    
    student@DESKTOP MINGW64 ~/Desktop/새 폴더 (master)
    
+   $ git remote -v  # 현재 폴더가 어떤 git url과 연결되어 있는지 확인할 수 있다.
+   origin  https://github.com/ByeongjunCho/TIL.git (fetch)
+   origin  https://github.com/ByeongjunCho/TIL.git (push)
    ```
 
    * `git init`명렁어를 입력하면, 해당 디렉토리에 `.git/`폴더가 생성된다.
    * 모든 git과 관련된 내용은 해당 폴더에 담겨있다.
    * 정자소로 설정되었다면, `git bash`에서 `(master)가 나타난다.
+   * `git remote -v` 명령어를 통해 현재 폴더가 어떤 git url과 연결되어 있는지 확인할 수 있다.
 
 2. Staging area(커밋 대상 목록)에 담기
 
