@@ -93,47 +93,47 @@
    
    
    
-   ## 파이썬을 통한 크롤링
+## 파이썬을 통한 크롤링
+
+1. 필수 설치 패키지
    
-   1. 필수 설치 패키지
+   * requests : 파이썬으로 요청을 보내는 패키지
+     
+   * bs4 : 문자열을 html으로 구조화(파싱)를 해주는 패키지
+     
+     ```bash
+     $ pip install requests
+     $ pip install bs4
+     ```
    
-      * requests : 파이썬으로 요청을 보내는 패키지
-      
-      * bs4 : 문자열을 html으로 구조화(파싱)를 해주는 패키지
-      
-        ```bash
-        $ pip install requests
-        $ pip install bs4
-        ```
-      
-   2. 네이버에서 코스피지수 가져오기
+2. 네이버에서 코스피지수 가져오기
    
-      ```python
-      # 0. 활용할 페키지를 불러온다.
-      import requests
-      from bs4 import BeautifulSoup
-      # 1. url을 설정한다.
-      url = 'https://www.naver.com/sise/'
-      # 2. 요청을 보내고, 그 결과의 내용을 text response에 저장한다.
-      response = requests.get(url).text
-      # 3. html 문서로 변환한다.
-      soup = BeautifulSoup(response, 'html.parser')
-      # 4. 원하는 값을 선택자(selector)를 활용해서 가져온다.
-      kospi = soup.select_one('#KOSPI_now').text
-      ```
+   ```python
+   # 0. 활용할 페키지를 불러온다.
+   import requests
+   from bs4 import BeautifulSoup
+   # 1. url을 설정한다.
+   url = 'https://www.naver.com/sise/'
+   # 2. 요청을 보내고, 그 결과의 내용을 text response에 저장한다.
+   response = requests.get(url).text
+   # 3. html 문서로 변환한다.
+   soup = BeautifulSoup(response, 'html.parser')
+   # 4. 원하는 값을 선택자(selector)를 활용해서 가져온다.
+   kospi = soup.select_one('#KOSPI_now').text
+   ```
    
-   3. 간단한 인터넷 웹 열기
+3. 간단한 인터넷 웹 열기
+
+   ```python
+   import webbrowser # 인터넷 브라우저를 open할 수 있는 모듈
    
-      ```python
-      import webbrowser # 인터넷 브라우저를 open할 수 있는 모듈
-      
-      idols = ['bts', 'iu', 'ian goodfellow']
-      
-      for idol in idols:
-          # string interpolation
-          # 문자열 보간법 : f-string / 3.6+  
-          webbrowser.open(f'https://search.naver.com/search.naver?&query={idol}')
-      ```
+   idols = ['bts', 'iu', 'ian goodfellow']
+   
+   for idol in idols:
+       # string interpolation
+       # 문자열 보간법 : f-string / 3.6+  
+       webbrowser.open(f'https://search.naver.com/search.naver?&query={idol}')
+   ```
    
       
    
