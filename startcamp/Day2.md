@@ -36,7 +36,7 @@
 
    * `git init`명렁어를 입력하면, 해당 디렉토리에 `.git/`폴더가 생성된다.
    * 모든 git과 관련된 내용은 해당 폴더에 담겨있다.
-   * 정자소로 설정되었다면, `git bash`에서 `(master)가 나타난다.
+   * 정자소로 설정되었다면, `git bash`에서 `(master)`가 나타난다.
    * `git remote -v` 명령어를 통해 현재 폴더가 어떤 git url과 연결되어 있는지 확인할 수 있다.
 
 2. Staging area(커밋 대상 목록)에 담기
@@ -143,6 +143,8 @@
 
 
 
+
+
 # 기타사항
 
 git => (분산) 버전 관리 시스템
@@ -237,13 +239,29 @@ $ git add .  # 모든 파일 commit대기
 
 ```bash
 # 미리 github홈페이지에서 저장소를 만든 경우
-git remote add origin https://github.com/ByeongjunCho/gittest.git # url주소
-git push -u origin master # commit를 저장소에 저장
+$ git remote add origin https://github.com/ByeongjunCho/gittest.git # url주소
+$ git push -u origin master # commit를 저장소에 저장  -u : 처음 한번만 사용하면 그 이후 -u 이후 값은 자동으로 입력된다. 
+# git push -u이후 
+# $ git push만 사용하게 하면 된다.
 ```
 
 
 
 
+
+선택자(selector)
+
+id : #____ >P
+
+class : class=__BLUE__
+
+/span : 
+
+
+
+<span class = 'blue' id = 'ssafy'>
+
+<p> <p>
 
 > vi 명령어 모음
 >
