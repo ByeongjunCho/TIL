@@ -66,6 +66,70 @@
    * `Staging Area` 에 담겨 있는 내용을 이력으로 남긴다.
    * 커밋메시지는 반드시 해당 이력의 내용을 정확하게 표현해야 한다.(보통 오픈소스 프로젝트, 회사 내에서 관련된 컨벤션이 존재한다.)
 
+4. 커밋이력 확인하기
+
+   ```bash
+   $ git log
+   commit 6a616e5bb5de06a793c167cbc7bf1b34cf72f6a1 (HEAD -> master)
+   Author: ByeongjunCho <jjgk91@naver.com>
+   Date:   Tue Jul 9 10:49:12 2019 +0900
+   
+       a.txt 생성
+   
+   $ git log -2  # 최근 2개만 생성
+   ```
+
+   * `git log -n` 옵션을 주면, 최근 n개의 커밋을 보여준다.
+   * 커밋 이력을 남긴 이후에 커밋 메시지 변경, 삭제 등을 할 수 있는데 이 경우는 매우 조심해야 한다!
+
+5. **git 상태 확인**
+
+   **항상 모든 명령어를 입력하기 전에 아래의 명령어를 입력하는 습관을 들이자!**
+
+   ```bash
+   $ git bash status
+   ```
+
+
+
+
+
+## Git 원격 저장소 활용하기
+
+원격 저장소(`remote repository`)는 `github`, `gitlab`, `bitbucket` 등 다양한 서비스를 사용할 수 있다.
+
+1. 원격 저장소('remote repository') 설정
+
+   ```bash
+   $ git remote add origin __https://github.com__  # 해당 저장소의 url
+   ```
+
+   * 로컬 저장소에 최초에 한번만 등록하면 된다.
+   * 원격 저장소(remote)를 `origin` 이라는 이름으로 정해진 url을 `등록(add)`하는 것이다.
+
+2. 원격 저장소 `push`
+
+   ```bash
+   $git push origin master
+   ```
+
+   * `origin` 으로 설정된 원격 저장소에 `push` 한다.
+
+3. 원격 저장소에서 `pull`
+
+   ```bash
+   $ git pull origin master
+   ```
+
+   * 원격 저장소에 새로운 변경 사항이 있는 경우 `pull`을 통해 받아온다.
+
+4. `clone`
+
+   ```bash
+   $ git clone __url__
+   ```
+
+   * `clone` 은 원격 저장소에서 최초에 받아올 때 활용한다.
 
 
 
@@ -75,6 +139,7 @@
 
 
 
+# 기타사항
 
 git => (분산) 버전 관리 시스템
 
