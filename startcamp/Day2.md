@@ -81,7 +81,7 @@
 
   ```python
   with open('a.txt', 'r', encoding = 'utf-8') as f:
-      txt = f.readlines()
+      lines = f.readlines()
       
   for line in lines:
       print(line)
