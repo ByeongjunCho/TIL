@@ -192,6 +192,36 @@ return render_template('app.html', name=name)
 
 
 
+## Flask Template Engine - jinja2
+
+Flask는 기본적으로 Template을 만들 때 `jinja2` 언어를 사용한다. 기본 문법은 다음과 같다.
+
+1. 값 출력
+
+   ```jinja2
+   <h1> {{name}}, 안녕? </h1>
+   ```
+
+2. 조건문
+
+   ```jinja2
+   {% if name == '용흠' %}
+   	<h1>반장님 안녕하세요</h1>
+   {% else %}
+   	<h2>ㅎㅇ</h2>
+   {% endif %}
+   ```
+
+3. 반복문
+
+   ```jinja2
+   {% for menu in menu_list %}
+   	<li> {{ menu }}</li>
+   {% endfor %}
+   ```
+
+   
+
 
 
 
