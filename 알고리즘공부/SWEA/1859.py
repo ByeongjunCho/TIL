@@ -1,21 +1,24 @@
 # 백만장자 프로젝트
-test_case = int(input())
+# test_case = int(input())
+test_case = 1
 # N = '5'
-# price = '1 1 3 1 2'
-def find_max_index(list1):
-    max_value = list1[0]
-    for i in range(len(list1) - 1):
-        if max_value < list1[i] and list1[i] > list1[i + 1]:
+price = '3 5 9'
+def find_max_index(values):
+    max_value = 0
+    for i in range(len(values) - 1):
+        if max_value >= values[i]:
             return i
-        elif i + 1 == len(list1):
-            return i
+        elif values[i] >= values[i+1]:
+            continue
         else:
-            max_value = list1[i]
+            return i + 1
+    else:
+        return i
 
 for case in range(test_case):
-    N = input()
-    # price = list(map(int, price.split(' ')))
-    price = list(map(int, input().split(' ')))
+    # N = input()
+    price = list(map(int, price.split(' ')))
+    # price = list(map(int, input().split(' ')))
     len_price = len(price)
 
     loc = 0  # 위치변수
@@ -36,5 +39,3 @@ for case in range(test_case):
             loc += max_index + 1
         
     print(f'#{case + 1} {max(get_price, 0)}')
-            
-    
