@@ -7,3 +7,5 @@ for s in string:
     else:
         a += s
 else: print(a)
+
+print(string.upper())

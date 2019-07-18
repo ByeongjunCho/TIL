@@ -1,3 +1,4 @@
+# 파스칼의 삼각형 출력
 T = int(input())
 def pascal(n):
     tmp = [1]

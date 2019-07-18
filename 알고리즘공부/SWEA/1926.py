@@ -6,7 +6,7 @@ def change_369(n):
     tmp = ''
     if '3' in str(n) or '6' in str(n) or '9' in str(n):
         for s in list(str(n)):
-            if s in ['3', '6', '9']:
+            if s in '369':
                 tmp += '-'
         else: 
             return tmp
