@@ -33,9 +33,34 @@ test_case = int(input())
 test_list = []
 for i in range(1, test_case + 1):
     result = 0
+    # tmp = input()
+    # test_list = tmp.split()
+    # test_list.sort(key=int)
+    # test_list = sorted(map(int, input().split(' ')))
+    test_list = list(map(int, input().split(' ')))
+    test_list.sort()
+    for n in test_list[1:9]:
+        result += n
+    print(f'#{i} {round(result/8)}')
+
+test_case = int(input())
+test_list = []
+for i in range(1, test_case + 1):
+    result = 0
     tmp = input()
     test_list = tmp.split()
     test_list.sort(key=int)
     for n in test_list[1:9]:
         result += n
+    print(f'#{i} {round(result/8)}')
+
+test_case = int(input())
+test_list = []
+for i in range(1, test_case + 1):
+    result = 0
+    tmp = input()
+    test_list = tmp.split()
+    test_list.sort(key=int)
+    for n in test_list[1:9]:
+        result += int(n)
     print(f'#{i} {round(result/8)}')
