@@ -1,4 +1,4 @@
-# project
+# project 01
 
 ## 01. 영화진흥위원회 오픈 API(주간/주말 박스오피스 데이터) 
 
@@ -18,7 +18,7 @@
 targetDt = '20190713' #yyyymmdd 날짜정보
 weekGb = '0'  # 주간 : 0, 주말 : 1, 주중 : 2
 api_url = f'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key={key}&targetDt={targetDt}&weekGb={weekGb}'
-# 다른 정보는 이레 링크
+# 다른 정보는 아래 링크
 ```
 
 ```python
