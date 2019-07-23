@@ -38,8 +38,8 @@ def conv_max(tar, tar_size, win_size): # 입력이 2중 리스트라 가정
     for h in range(slide_h):  
         for w in range(slide_w):
             result = 0
-            for j in range(win_size):
-                for i in range(win_size):
+            for j in range(win_size): # row
+                for i in range(win_size): # column
                     # result += win[j][i] * tar[h+j][w+i]
                     result += tar[h+j][w+i]
 

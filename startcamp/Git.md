@@ -257,6 +257,25 @@ $ git push -u origin master # commit를 저장소에 저장  -u : 처음 한번�
 # $ git push만 사용하게 하면 된다.
 ```
 
+# Gitlab 사용법
+
+```bash
+git remote add gitlab <gitlab 주소>
+git remote -v
+```
+
+```
+gitlab  https://lab.ssafy.com/ByeongjunCho/daily.git (fetch)
+gitlab  https://lab.ssafy.com/ByeongjunCho/daily.git (push)
+origin  https://github.com/ByeongjunCho/daily.git (fetch)
+origin  https://github.com/ByeongjunCho/daily.git (push)
+```
+
+```bash
+git push origin master # github로 push
+git push gitlab master # gitlab로 push
+```
+
 
 
 
