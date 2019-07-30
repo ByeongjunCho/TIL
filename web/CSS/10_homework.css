@@ -1,0 +1,8 @@
+/* 후손 셀렉터 */
+div p {
+  color: crimson;
+}
+/* 자식 셀렉터 */
+div > p {
+  color: green;
+}
