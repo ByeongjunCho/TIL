@@ -267,3 +267,114 @@ div {
 * inline처럼 자리를 차지하는것이 아닌 
 
 이것도 해보고 판단하자. 
+
+## 9. background
+
+### 9.1 기초
+
+* block요소는 기본적으로 content의 영역(혹은 자식)의 높이를 가진다. 즉 자식 혹은 content의 높이가 block의 높이가 된다.
+* block요소의 너비는 상위 요소의 영향을 받는다. 즉 상위 요소의 너비에 의해 block요소의 너비가 결정된다.
+
+### 9.2 background 요소
+
+```css
+.header {
+  height: 500px;
+  /* 이미지 경로 */
+  background-image: url('bg.jpg');
+  /* 이미지 크기 
+  -> 부족한 부분은 바둑판 형식 배치
+  */
+  /* background-size: 700px 500px; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+
+  /*
+  px :
+    width, height 순으로 지정.
+    값 하나만 지정하면, width 지정 + height: auto
+  cover :
+    배경이미지 크기의 비율을 고정
+    width, height 큰 값을 배경 이미지에 맞춤,
+    보이지 않는 영역이 발생 가능함.
+  contain:
+    배경이미지 크기의 비율을 고정
+    이미지가 보이지 않는 영역이 없도록 조정
+    이미지 반복될 수 있음
+    */
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+  
+  background-size: cover;
+  background-position:bottom;
+}
+```
+
+* 요소의 높이를 지정하지 않으면 block의 높이는 0이 된다.
+* `background-image`요소를 이용해 원하는 이미지를 background로 사용할 수 있다.
+
+## 10. font
+
+### 10.1 font기초
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="10_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dokdo|East+Sea+Dokdo|Sunflower:300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <p>기본 사이즈 16px font-size</p>
+  <p class="font-1">사이즈 32px font-size</p>
+  <p class="font-2">사이즈 130% font-size</p>
+  <p class="font-3">구글 독도체</p>
+  <p class="font-4">동해독도체</p>
+  <p class="font-5">sunflower체</p>
+</body>
+</html>
+```
+
+
+
+```css
+/*10_style.css*/
+.font-1 {
+  font-size: 2em;
+  /* 폰트
+    첫번째 폰트가 사용자 컴퓨터에 없으면, 다음 폰트 적용
+  */
+  font-family: 'Times New Roman', Times, serif;
+    
+  /* 폰트 굵기 */
+  font-weight: 300;
+    
+  /* 폰트 스타일 */
+  font-style: italic;
+}
+
+.font-2 {
+  font-size: 130%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.font-3 {
+  font-family: 'Dokdo', cursive;
+}
+
+.font-4 {
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.font-5 {
+  font-family: 'Sunflower', sans-serif;
+}
+```
+

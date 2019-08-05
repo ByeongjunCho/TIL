@@ -5,6 +5,7 @@ def check(days):
     start = 0 # 시작값
     idx = 1 # 중간값
     count = 1 # 몇 개의 기능이 있는지 count
+
     while True:
         if idx == len(days):
             result.append(count)
@@ -18,7 +19,6 @@ def check(days):
             idx += 1
             count += 1
     return result
-
 def solution(progresses, speeds):
     tmp_days = []
 
