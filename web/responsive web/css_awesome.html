@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- css는 head에 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
   <style>
-    div {
-      width: 300px;
+    body {
+      display: flex;
+    }
 
+    .container {
+      border: black solid 2px;
+      display: flex;
+      width: 600px;
+      height: 300px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
 
     }
+
+    .item {
+      width: 300px;
+      height: 300px;
+      line-height: 300px;
+      border: black solid 2px;
+      background: yellow;
+      text-align: center;
+    }
+
+    /* .row {
+      text-align: center;
+    } */
   </style>
 </head>
+
 <body>
-  <!-- reboot.css를 통해서 기본 브라우저 태그의 속성값을 초기화함 -->
-  <div class=" border border-dark text-center">
-    <button type="button" class="btn btn-danger my-2">Danger</button>
+  <div class="container">
+    <div class="item">중앙으로</div>
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
   </div>
-  <div class=" border border-dark ">
-  <div class="alert alert-info my-2" role="alert">
-      A simple info alert—check it out!
-    </div>
-  </div>
-  <!-- javascript는 body 닫는 테그 바로 위에 -->
+  
+  <!-- spacing -->
+  <div></div>
+  <h1>spacing!</h1>
+  <h2 class="mt-3">mt-3</h2>
+  <h3 class="mp-5">mp-5!</h3>
+  <h4 class="mt-5">mt-5</h4>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
 </html>
