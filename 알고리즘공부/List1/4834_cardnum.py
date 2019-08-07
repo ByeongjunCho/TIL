@@ -10,7 +10,7 @@ def number_card(my_list):
             max_num = my_list[i]
     return idx, max_num
 for test_case in range(1, T + 1):
-    # ///////////////////////////////////////////////////////////////////////////////////
+    # ///////////////////////////////
     N = int(input())
     card_number = list(map(int, list(input())))
     # 카드 숫자가 나온 횟수만큼 담는다.

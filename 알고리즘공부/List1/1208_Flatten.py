@@ -29,3 +29,9 @@ for T in range(1, 11):
     print('#{} {}'.format(T, box_list[max_ix] - box_list[min_ix]))
     # print('#{} {}'.format(T, tmp))
 
+# 빈도수 계산
+# ex) 0 0 3 1 1 2 1 0 2 1 0
+#
+# 최대/최소 찾기
+# ex)
+# 평탄화 작업
