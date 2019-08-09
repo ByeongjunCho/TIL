@@ -1,0 +1,43 @@
+body {
+  height: 10000px;
+}
+
+header {
+  height: 350px;
+  width: 100%;
+  background-image: url("images/how.jpg");
+}
+
+footer {
+  height: 50px;
+}
+
+.font1 {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+.font2 {
+  font-family: 'Single Day', cursive;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+h3 > hr {
+  width: 70px;
+  text-align: center;
+  background: red;
+}
+
+img {
+  cursor: pointer;
+}
+
+.degreebox {
+  width: 40px;
+  height: 30px;
+  border-radius: 10%;
+  text-align: center;
+  line-height: 30px;
+}

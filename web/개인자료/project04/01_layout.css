@@ -1,0 +1,21 @@
+body {
+  height: 10000px;
+}
+
+header {
+  height: 350px;
+  width: 100%;
+  background-image: url("images/how.jpg");
+}
+
+footer {
+  height: 50px;
+}
+
+.font1 {
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+.font2 {
+  font-family: 'Single Day', cursive;
+}
