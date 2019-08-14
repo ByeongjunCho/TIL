@@ -4,7 +4,7 @@ sys.stdin = open('sample_input.txt', 'r')
 
 def cook_min(arr, N):
     min_cook = 20000 * 16
-    for i in range(2**N):
+    for i in range(1<<N):
         cook = list(range(N))
         cook_tmp = cook[:]
         tmp1 = 0  
@@ -38,3 +38,21 @@ for T in range(1, int(input())+1):
     for _ in range(N):
         test_arr.append(list(map(int, input().split())))
     print('#{} {}'.format(T, cook_min(test_arr, N)))
+
+
+# 요리사
+# 식재료를 2 그룹으로 나누어야 된다.
+# N개의 식재료 --> N/2, N/2
+# N = 16 최대 --> 2^16 = 65536
+
+arr = 'ABCD'
+N = 4
+for set in range(1 << N):
+    A, B = [], []
+    for i in range(N):
+        if set & (1<<i):
+            A.append(arr[i])
+        else:
+            B.append(arr[i])
+    if len(A) == len(B):
+        print(A, B)

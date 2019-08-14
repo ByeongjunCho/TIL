@@ -29,7 +29,7 @@
 
 
 sangen_N = input()
-sangen_card = set(input().split())
+sangen_card = set(input().split()) # 이진탐색트리, 해싱
 test_N = input()
 test_card = input().split()
 
