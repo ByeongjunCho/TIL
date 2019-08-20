@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c912248b-2149-45fb-a0c4-2d521e3bc12f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../String1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../String1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printer.py" beforeDir="false" afterPath="$PROJECT_DIR$/printer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +14,7 @@
     <session id="-1528722373">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -23,22 +23,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="9" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="9" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="5041" />
+          <entry key="Python Console" value="43" />
+          <entry key="py" value="6873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="5041" />
+          <entry key="Python" value="6916" />
         </counts>
       </usages-collector>
     </session>
@@ -76,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/printer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="1188">
+              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -97,6 +98,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Setup Script" />
       </list>
     </option>
   </component>
@@ -112,13 +114,14 @@
         <option value="$PROJECT_DIR$/top.py" />
         <option value="$PROJECT_DIR$/print.py" />
         <option value="$PROJECT_DIR$/printer.py" />
+        <option value="$PROJECT_DIR$/BridgeTruck.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="668" />
-    <option name="y" value="35" />
-    <option name="width" value="913" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="698" />
+    <option name="y" value="36" />
+    <option name="width" value="1105" />
     <option name="height" value="949" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -159,8 +162,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.top">
-    <configuration name="124_nation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.BridgeTruck">
+    <configuration name="BridgeTruck" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="프로그래머스" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,7 +175,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/124_nation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BridgeTruck.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -223,6 +226,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="printer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="프로그래머스" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/printer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="top" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="프로그래머스" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,17 +269,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.124_nation" />
       <item itemvalue="Python.develop_func" />
       <item itemvalue="Python.SkillTree" />
       <item itemvalue="Python.top" />
+      <item itemvalue="Python.printer" />
+      <item itemvalue="Python.BridgeTruck" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.BridgeTruck" />
+        <item itemvalue="Python.printer" />
         <item itemvalue="Python.top" />
         <item itemvalue="Python.develop_func" />
         <item itemvalue="Python.SkillTree" />
-        <item itemvalue="Python.124_nation" />
       </list>
     </recent_temporary>
   </component>
@@ -273,23 +299,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="627" y="36" width="913" height="949" extended-state="0" />
+    <frame x="698" y="36" width="1105" height="949" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19542857" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16026242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35287732" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37209302" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35179153" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42014742" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -356,10 +382,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BridgeTruck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/printer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="1188">
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
         </state>
       </provider>
     </entry>
