@@ -2,6 +2,18 @@
 import sys
 sys.stdin = open('1267_input.txt', 'r')
 
+# 위상 정렬
+# 방법 1. 진입 차수가 0인 정점을 큐에 삽입
+# 방법 2. DFS를 수행하면서 더이상 갈 곳이 없으면 그 자리를 기록하고 역순으로 출력
+
+
+def DFS(v):
+    visit[v] = True
+    for w in G[v]:
+        if not visit[w]:
+            DFS(w)
+    stack.append(w)
+
 for tc in range(1, 11):
     V, E = map(int, input().split())
     G = [[] for _ in range(V+1)]

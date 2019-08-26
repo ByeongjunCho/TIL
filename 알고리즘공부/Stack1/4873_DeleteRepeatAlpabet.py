@@ -12,6 +12,20 @@ def DelReAlpah(string):
     else:
         return DelReAlpah(string)
 
+def DelReAlpah(string):
+    S = []
+    idx = 0
+    while idx != len(string):
+        if not S:
+            S.append(string[idx])
+        if S[-1] == string[idx]:
+            S.pop()
+        else:
+            S.append(string[idx])
+        idx += 1
+    return S
+
+
 T = int(input())
 
 for tc in range(1, T+1):
