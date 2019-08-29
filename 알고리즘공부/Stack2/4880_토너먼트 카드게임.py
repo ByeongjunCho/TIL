@@ -20,9 +20,22 @@ def func(arr, i, j):
             else:
                 return result_right
 
-T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    arr = list(map(int, input().split()))
-    print('#{} {}'.format(tc, func(arr, 0, N-1)+1))
+def divide(lo, hi):
+    print(lo, hi)
+    if lo == hi:
+        return
+
+    mid = (lo + hi) >> 1
+    # 왼쪽 lo ~ mid, 오른쪽 mid + 1 ~ hi
+    divide(lo, mid)
+    divide(mid + 1, hi)
+
+
+divide(0, 7)
+
+# T = int(input())
+# for tc in range(1, T+1):
+#     N = int(input())
+#     arr = list(map(int, input().split()))
+#     print('#{} {}'.format(tc, func(arr, 0, N-1)+1))
 
