@@ -67,14 +67,19 @@ class List:
                 idx -= 1
 
             if prev is None:  # 데이터가 한개인 경우
+                cur.prev = node
                 node.next = cur
                 self.head = node
+                
             elif cur is None:   # 범위를 넘어가는 경우
                 cur = node
+                cur.prev = prev
                 self.tail = node
             else:
+                cur.prev = node
                 node.next = cur
                 prev.next = node
+
         self.size += 1
 
     def insertAtAll(self, args):
