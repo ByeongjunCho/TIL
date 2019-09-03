@@ -1,3 +1,4 @@
+
 def find_matrix(arr, N):
     S = []
     for i in range(N):
@@ -31,10 +32,18 @@ def find_matrix(arr, N):
                 for row in range(i, i+l):
                     for col in range(j, j+k):
                         arr[row][col] = 0
-    return S
+    result = []
+    for i in range(0, len(S), 4):
+        result.append(((S[i+2]-S[i]+1) * (S[i+3]-S[i+1]+1), S[i+2]-S[i]+1, S[i+3]-S[i+1]+1))
+    result.sort()
+    tmp = [str(len(result))]
+    for c in result:
+        tmp.append(str(c[1]))
+        tmp.append(str(c[2]))
+    return tmp
 
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     arr = [list(map(int, input().split())) for _ in range(N)]
-    print(find_matrix(arr, N))
+    print('#{} {}'.format(tc, ' '.join(find_matrix(arr, N))))
