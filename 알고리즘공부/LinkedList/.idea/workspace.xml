@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f506808-cb98-429a-94c2-c739973c816e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/1258_행렬찾기.py" beforeDir="false" afterPath="$PROJECT_DIR$/1258_행렬찾기.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../집중실습/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../집중실습/14501_boj_퇴사.py" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/14501_boj_퇴사.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../집중실습/1697_boj_숨바꼭질.py" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/1697_boj_숨바꼭질.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../집중실습/1759_boj_암호만들기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/1759_boj_암호만들기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../집중실습/14888_boj_연산자끼워넣기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/14888_boj_연산자끼워넣기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../집중실습/4615_재미있는오셀로게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/../집중실습/4615_재미있는오셀로게임.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +16,11 @@
     <session id="1744566967">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,26 +78,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/6485_삼성시의버스노선.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1258_행렬찾기.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +139,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../집중실습" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -458,17 +438,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/6485_삼성시의버스노선.py">
+    <entry file="file://$PROJECT_DIR$/1258_행렬찾기.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="189">
+          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1258_행렬찾기.py">
+    <entry file="file://$PROJECT_DIR$/6485_삼성시의버스노선.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
