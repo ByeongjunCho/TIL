@@ -94,7 +94,26 @@
    $ git status
    ```
 
+6. commit메시지 변경
 
+   ```bash
+   $ git commit --amend
+   ```
+
+   * stage에 있는 파일들의 commit 메시지를 변경한다.
+
+7. git 변경된 파일 복구
+
+   ```bash
+   $ git checkout -- <file_name>
+   ```
+
+8. 이전으로 돌아가기
+
+   ```bash
+   $ git reset --hard <hashcode> # 이력이 남지 않음(hard/soft)
+   $ git revert  # 이력이 남음
+   ```
 
 
 
@@ -154,6 +173,15 @@ profile.jpg # profile.jpg 파일
 예를 들면, pycharm을 쓰고 있을 때, `.idea/` 를 올리지 않는다거나, python에서는 `__pycache__/`를 올릴 필요는 없다.
 
 
+
+# Git을 이용한 협업
+
+1. Fork 작업
+2. Fork한 저장소를 clone
+3. 직접 코드 수정
+   * 수정된 데이터는 그때그때 add, commit 를 하여 commit message가 꼬이지 않게 만들어야 좋다.
+4. fork한 저장소로 push
+5. 수정 후 상대방에게 merge요청
 
 
 
