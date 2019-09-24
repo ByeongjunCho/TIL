@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f506808-cb98-429a-94c2-c739973c816e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../FullsearchGreedy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FullsearchGreedy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../백준/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../백준/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../백준/.idea/백준.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../백준/.idea/백준.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../백준/1405_미친로봇.py" beforeDir="false" afterPath="$PROJECT_DIR$/../백준/1405_미친로봇.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../백준/2573_빙산.py" beforeDir="false" afterPath="$PROJECT_DIR$/../백준/2573_빙산.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +49,10 @@
     <session id="1018622743">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -127,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,11 +139,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../백준" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">

@@ -21,14 +21,16 @@ def ice():
     tmp_arr = [[0 for _ in range(M)] for _ in range(N)]
     for i in range(N):
         for j in range(M):
+            if arr[i][j] == 0: continue
             tmp = 0
             for k in range(4):
                 wy, wx = i + dy[k], j + dx[k]
-                if 0 <= wy < N and 0 <= wx < M and not arr[wy][wx]:
+                if 0 <= wy < N and 0 <= wx < M and arr[wy][wx] == 0:
                     tmp += 1
             tmp_arr[i][j] = tmp
     for i in range(N):
         for j in range(M):
+            if arr[i][j] == 0: continue
             if not tmp_arr[i][j]:
                 continue
             arr[i][j] -= tmp_arr[i][j]
