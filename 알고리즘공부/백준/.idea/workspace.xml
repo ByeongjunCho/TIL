@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236e8410-e964-4f04-8338-6500c7836d55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LinkedList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FullsearchGreedy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FullsearchGreedy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FullsearchGreedy/1865_동철이의일분배.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FullsearchGreedy/1865_동철이의일분배.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FullsearchGreedy/5203_베이비진.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FullsearchGreedy/5203_베이비진.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/백준.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/백준.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1405_미친로봇.py" beforeDir="false" afterPath="$PROJECT_DIR$/1405_미친로봇.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2573_빙산.py" beforeDir="false" afterPath="$PROJECT_DIR$/2573_빙산.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,30 +19,30 @@
     <session id="378924884">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="8" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="8" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="6" />
-          <entry key="py" value="2320" />
+          <entry key="py" value="5741" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2326" />
+          <entry key="Python" value="5747" />
         </counts>
       </usages-collector>
     </session>
@@ -79,13 +79,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2210_숫자판점프.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/1943_소문난칠공주.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="20" lean-forward="true" selection-end-line="20" />
+            <state relative-caret-position="252">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
-                <marker date="1569335595171" expanded="true" signature="90:341" ph="..." />
+                <marker date="1569393906731" expanded="true" signature="743:745" ph="..." />
+                <marker date="1569393906731" expanded="true" signature="807:812" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/7562_나이트의이동.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <folding>
+                <marker date="1569401929529" expanded="true" signature="55:343" ph="..." />
               </folding>
             </state>
           </provider>
@@ -110,6 +123,9 @@
         <option value="$PROJECT_DIR$/10026_적록색약.py" />
         <option value="$PROJECT_DIR$/15649_N과M.py" />
         <option value="$PROJECT_DIR$/2210_숫자판점프.py" />
+        <option value="$PROJECT_DIR$/111.py" />
+        <option value="$PROJECT_DIR$/1943_소문난칠공주.py" />
+        <option value="$PROJECT_DIR$/7562_나이트의이동.py" />
       </list>
     </option>
   </component>
@@ -127,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,6 +154,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,8 +173,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2210_숫자판점프">
-    <configuration name="10026_적록색약" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.1943_소문난칠공주">
+    <configuration name="111" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="백준" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -170,7 +186,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10026_적록색약.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/111.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,6 +237,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="1943_소문난칠공주" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="백준" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1943_소문난칠공주.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="2210_숫자판점프" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="백준" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -243,17 +280,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.10026_적록색약" />
       <item itemvalue="Python.15649_N과M" />
       <item itemvalue="Python.14502_연구소" />
       <item itemvalue="Python.2210_숫자판점프" />
+      <item itemvalue="Python.1943_소문난칠공주" />
+      <item itemvalue="Python.111" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1943_소문난칠공주" />
+        <item itemvalue="Python.111" />
         <item itemvalue="Python.2210_숫자판점프" />
         <item itemvalue="Python.14502_연구소" />
         <item itemvalue="Python.15649_N과M" />
-        <item itemvalue="Python.10026_적록색약" />
       </list>
     </recent_temporary>
   </component>
@@ -272,9 +311,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="715" y="20" width="1094" height="930" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23674242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -295,6 +333,17 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/111.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/9020_Goldbach.py">
@@ -342,10 +391,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2210_숫자판점프.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="20" lean-forward="true" selection-end-line="20" />
+        <state relative-caret-position="56">
+          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1978.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/111.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1943_소문난칠공주.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <marker date="1569335595171" expanded="true" signature="90:341" ph="..." />
+            <marker date="1569393906731" expanded="true" signature="743:745" ph="..." />
+            <marker date="1569393906731" expanded="true" signature="807:812" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7562_나이트의이동.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <marker date="1569401929529" expanded="true" signature="55:343" ph="..." />
           </folding>
         </state>
       </provider>

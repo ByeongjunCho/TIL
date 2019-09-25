@@ -3,11 +3,13 @@ def check_win(arr1, arr2):
     for i in range(8):
         if arr1[i] and arr1[i + 1] and arr1[i + 2]:
             return 1
-        if arr2[i] and arr2[i + 1] and arr2[i + 2]:
-            return 2
     # 2. triplet 체크
     if max(arr1) >= 3:
         return 1
+
+    for i in range(8):
+        if arr2[i] and arr2[i + 1] and arr2[i + 2]:
+            return 2
     if max(arr2) >= 3:
         return 2
     return 0
