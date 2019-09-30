@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236e8410-e964-4f04-8338-6500c7836d55" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/백준.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/백준.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7562_나이트의이동.py" beforeDir="false" afterPath="$PROJECT_DIR$/7562_나이트의이동.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/분할정복백트랙킹.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/분할정복백트랙킹.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/5204_병합정렬.py" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/5204_병합정렬.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/5207_이진탐색.py" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/5207_이진탐색.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/5208_전기버스2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/5208_전기버스2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +20,10 @@
     <session id="378924884">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -81,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1943_소문난칠공주.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="171">
               <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
             </state>
           </provider>
@@ -91,14 +95,18 @@
         <entry file="file://$PROJECT_DIR$/7562_나이트의이동.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2580_스도쿠.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="57" selection-start-column="56" selection-end-column="57" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -156,7 +164,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../분할정복백트랙킹" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -407,7 +415,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1943_소문난칠공주.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="171">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
         </state>
       </provider>
@@ -415,12 +423,16 @@
     <entry file="file://$PROJECT_DIR$/7562_나이트의이동.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2580_스도쿠.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="57" selection-start-column="56" selection-end-column="57" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
