@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="236e8410-e964-4f04-8338-6500c7836d55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../191004/.idea/191004.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../191004/.idea/191004.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../191004/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../191004/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../191004/1808_지희의고장난계산기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../191004/1808_지희의고장난계산기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../191004/2115_벌꿀채취.py" beforeDir="false" afterPath="$PROJECT_DIR$/../191004/2115_벌꿀채취.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/백준.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/백준.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/분할정복백트랙킹.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../분할정복백트랙킹/.idea/분할정복백트랙킹.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7576_토마토.py" beforeDir="false" afterPath="$PROJECT_DIR$/7576_토마토.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +21,11 @@
     <session id="378924884">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,12 +41,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="6" />
-          <entry key="py" value="7433" />
+          <entry key="py" value="8126" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="7439" />
+          <entry key="Python" value="8132" />
         </counts>
       </usages-collector>
     </session>
@@ -86,7 +88,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1012_유기농배추.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
+            <state relative-caret-position="361">
               <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
@@ -95,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1325_효율적인해킹.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="76">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -104,11 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/7576_토마토.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-              <folding>
-                <marker date="1570372857692" expanded="true" signature="28:1147" ph="..." />
-              </folding>
+            <state relative-caret-position="1258">
+              <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -144,8 +143,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="837" />
-    <option name="y" value="36" />
+    <option name="x" value="777" />
+    <option name="y" value="57" />
     <option name="width" value="1094" />
     <option name="height" value="930" />
   </component>
@@ -157,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,12 +168,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value=":&#9;null&#9;null" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../191004" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -325,7 +324,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="837" y="36" width="1094" height="930" extended-state="0" />
+    <frame x="777" y="57" width="1094" height="930" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21117425" />
@@ -446,25 +445,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1012_유기농배추.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
+        <state relative-caret-position="361">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1325_효율적인해킹.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="76">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/7576_토마토.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <marker date="1570372857692" expanded="true" signature="28:1147" ph="..." />
-          </folding>
+        <state relative-caret-position="1258">
+          <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
         </state>
       </provider>
     </entry>
