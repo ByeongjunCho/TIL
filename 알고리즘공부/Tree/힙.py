@@ -1,5 +1,5 @@
 # 힙 구현
-H = [0] * 100   # 저장소
+H = [0] * 15   # 저장소
 top = 0         # 자료의 수, 마지막 노드의 인덱스
 
 def push(item):
@@ -36,9 +36,10 @@ def pop():
     return ret
 
 
-data = [69, 10, 30, 2, 16, 8, 31, 22]
+data = [7,2,5,3,4,6]
 for val in data:
     push(val)
 
+print(H)
 while top:
     print(pop(), end=' ')

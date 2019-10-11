@@ -1,12 +1,27 @@
 c = []
-def calc():
-    status = ['+', '-', '*', '/']
+status = ['+', '-', '*', '/']
+def calc(a, b, c):
+    if c == '+':
+        return a + b
+    elif c == '-':
+        return a - b
+    elif c == '*':
+        return a * b
+    else:
+        return a / b
+
 def postorder(v):
     if v == 0:
         return
     postorder(L[v])
     postorder(R[v])
-
+    if V[v] in status:
+        b = c.pop()  # 피연산
+        a = c.pop()  # 연산
+        c.append(calc(a, b, V[v]))
+    else:
+        c.append(int(V[v]))
+    return c[-1]
 
 for tc in range(1, 11):
 
@@ -22,4 +37,4 @@ for tc in range(1, 11):
         elif len(tmp) == 4:
             L[int(tmp[0])] = int(tmp[2])
             R[int(tmp[0])] = int(tmp[3])
-    postorder(1)
+    print('#{} {}'.format(tc, int(postorder(1))))
