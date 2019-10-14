@@ -77,6 +77,14 @@
 
    ```python
    # orm
+   User.objects.create(first_name='길동',
+                       last_name='홍', 
+                       age=30, country='제주', 
+                       phone='010-1234-5678', 
+                       balance=300)
+   
+                       
+                       
    user = User()
    user.first_name = '럼프'
    user.last_name = '트'
@@ -131,12 +139,12 @@
    ```python
    # orm
    user = User.objects.get(pk=102).delete()
-```
-   
-      ```sql
-   -- sql
+   user = User.objects.get(pk=101)
+   user.delete()
+   ```
+   ```sql
    DELETE FROM users_user WHERE id=101;
-      ```
+   ```
 
 ### 조건에 따른 쿼리문
 
@@ -157,6 +165,8 @@
    ```python
    # orm
    User.objects.filter(age=30).values('first_name', 'last_name')
+   # print(User.objects.filter(age=30).values('first_name', 'last_name').query)
+   # Output : SELECT "users_user"."first_name", "users_user"."last_name" FROM "users_user" WHERE "users_user"."age" = 30
    ```
 
       ```sql
@@ -166,55 +176,78 @@
 
 3. 나이가 30살 이상인 사람의 인원 수
 
+   > gte : 크거나 같다.(이상)
+   >
+   > gt : 크다(초과)
+   >
+   > lte : 이하
+   >
+   > lt : 미만
+
    ```python
    # orm
-   User.objects.filter(age__gte=30)  # 이상
-   User.objects.filter(age__gt=30)  # 초과
-   User.objects.filter(age__lte=30)  # 이하
-   User.objects.filter(age__lt=30)  # 미만
+   User.objects.filter(age__gte=30).count()  # 이상
+   User.objects.filter(age__gt=30).count()  # 초과
+   User.objects.filter(age__lte=30).count()  # 이하
+   User.objects.filter(age__lt=30).count()  # 미만
+   # 퀴리 출력
+   print(User.objects.filter(age__gte=30).query)
+   # query는 queryset의 인스턴스 변수로 존재함
+   # Output: SELECT "users_user"."id", "users_user"."first_name", "users_user"."last_name", "users_user"."age", "users_user"."country", "users_user"."phone", "users_user"."balance" FROM "users_user" WHERE "users_user"."age" >= 30
    ```
 
-      ```sql
+   ```sql
    -- sql
    SELECT COUNT(*) FROM users_user WHERE age > 30;
-      ```
+   ```
 
 4. 나이가 30이면서 성이 김씨인 사람의 인원 수
 
    ```python
    # orm
-   User.objects.filter(age=30).filter(last_name='김').count()
    User.objects.filter(age=30, last_name='김').count()
+   # print(User.objects.filter(age=30, last_name='김').query)
+   # Output : SELECT "users_user"."id", "users_user"."first_name", "users_user"."last_name", "users_user"."age", "users_user"."country", "users_user"."phone", "users_user"."balance" FROM "users_user" WHERE ("users_user"."age" = 30 AND "users_user"."last_name" = 김)
+   User.objects.filter(age=30).filter(last_name='김').count()
    ```
 
       ```sql
    -- sql
-   SELECT COUNT(*) FROM users_user WHERE (age=30) AND (last_name='김');
+   SELECT COUNT(*) FROM users_user WHERE age=30 AND last_name='김';
       ```
 
 5. 지역번호가 02인 사람의 인원 수
+
+   > LIKE
+   >
+   > exact, contains, startswith, endswith
+   >
+   > iexact, icontains, istartswith, iendswith
+   >
+   > i -> case insensitive(대소문자 무시)
 
    ```python
    # orm
    User.objects.filter(phone__istartswith='02').count()
    ```
 
-      ```sql
+   ```sql
    -- sql
-   SELECT COUNT(*) FROM users_user WHERE phone LIKE '02%';
-      ```
+   SELECT COUNT(*) FROM users_user WHERE phone LIKE '02-%';
+   ```
 
 6. 거주 지역이 강원도이면서 성이 황씨인 사람의 이름
 
    ```python
    # orm
    User.objects.filter(country='강원도', last_name='황').values('first_name')
-```
-   
-      ```sql
+   ```
+
+
+   ```sql
    -- sql
    SELECT first_name FROM users_user WHERE country='강원도' AND last_name='황';
-      ```
+   ```
 
 
 
@@ -224,7 +257,10 @@
 
    ```python
    # orm
+   # age를 내림차순으로 정렬해서 10개 출력
    User.objects.order_by('-age')[:10]
+   print(User.objects.order_by('-age')[:10].query)
+   # Output : SELECT "users_user"."id", "users_user"."first_name", "users_user"."last_name", "users_user"."age", "users_user"."country", "users_user"."phone", "users_user"."balance" FROM "users_user" ORDER BY "users_user"."age" DESC  LIMIT 10
    ```
 
       ```sql
@@ -236,7 +272,7 @@
 
    ```python
    # orm
-   User.objects.order_by('balance')[:10].values('balance')
+   User.objects.order_by('balance')[:10]
    ```
 
       ```sql
@@ -248,54 +284,68 @@
 
       ```python
    # orm
-   User.objects.order_by('last_name').order_by('first_name')[5]
-```
-   
+   User.objects.order_by('-last_name', '-first_name')[4]
+   ```
       ```sql
    -- sql
-   SELECT * FROM users_user ORDER BY last_name, first_name DESC LIMIT 1 OFFSET 5;
+   SELECT * FROM users_user ORDER BY last_name DESC, first_name DESC LIMIT 1 OFFSET 4;
       ```
 
 
 
 ### 표현식
 
+[aggregate참고사항](https://docs.djangoproject.com/en/2.2/topics/db/aggregation/)
+
 1. 전체 평균 나이
 
-      ```python
+   ```python
    # orm
+   from django.db.models import Avg
+   User.objects.aggregate(Avg('age'))
+   # Output : {'age__avg': 28.247524752475247}
    ```
 
       ```sql
    -- sql
+   SELECT AVG(age) FROM users_user;
       ```
 
 2. 김씨의 평균 나이
 
-      ```python
+   ```python
    # orm
+   from django.db.models import Avg
+   User.objects.filter(last_name='김').aggregate(Avg('age'))
    ```
 
       ```sql
    -- sql
+   SELECT AVG(age) FROM users_user WHERE last_name='김';
       ```
 
 3. 계좌 잔액 중 가장 높은 값
 
-      ```python
+   ```python
    # orm
+   from django.db.models import Max
+   User.objects.aggregate(Max('balance'))
    ```
 
       ```sql
    -- sql
+   SELECT MAX(balance) FROM users_user;
       ```
 
 4. 계좌 잔액 총액
 
       ```python
    # orm
+   from django.db.models import Sum
+User.objects.aggregate(Sum('balance'))
    ```
-
+   
       ```sql
    -- sql
+   SELECT SUM(balance) FROM users_user;
       ```
