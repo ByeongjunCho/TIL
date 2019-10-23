@@ -1,0 +1,10 @@
+{% extends 'articles/base.html' %}
+{% block body %}
+    <hr>
+    <li>번호: {{article.id}} </li>
+    <li>제목: {{article.title}}</li>
+    <li>내용: {{article.content}}</li>
+    <li>작성자: {{article.user}}</li>
+    <hr>
+{% endfor %}
+{% endblock %}
