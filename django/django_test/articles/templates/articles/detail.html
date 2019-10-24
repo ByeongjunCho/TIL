@@ -1,0 +1,40 @@
+{% extends 'articles/base.html'%}
+{% block body %}
+  <p>제목 : {{article.title}} </p>
+  <p>내용 : {{article.content}} </p>
+  <p>만든사람 : {{article.user}} </p>
+  <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <form action="{% url 'articles:delete' article.pk %}" method='post'>
+      {% csrf_token%}
+    <input type="submit" value="삭제하기">
+  </form>
+
+  <h1>팔로우한 사람 수 : {{article.like.count}}</h1>
+  {% if user in article.like.all %}
+    <a href="{% url 'articles:like' article.pk %}">팔로우 취소</a>
+  {% else %}
+  <a href="{% url 'articles:like' article.pk %}">팔로우</a>
+  {% endif %}
+
+
+  <h4>총 댓글수 : {{article.comment_set.count}}</h4>
+  <p>댓글</p>
+  {% for comment in article.comment_set.all %}
+    <p>댓글주인 : {{comment.user}}</p>
+    <p>내용 : {{comment.comment}}</p>
+    {% if user == comment.user %}
+    <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+        {% csrf_token %}
+      <input type="submit" value="댓글삭제">
+    </form>
+    {% endif %}
+    <hr>
+  {% endfor %}
+
+
+  <form action="{% url 'articles:comment_create' article.pk %}" method='post'>
+      {% csrf_token%}
+      {{comment_form.as_p}}
+    <input type="submit" value="댓글달기">
+  </form>
+{% endblock %}

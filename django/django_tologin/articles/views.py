@@ -3,6 +3,7 @@ from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from .models import Article, Comment
 from .forms import ArticleForm, CommentForm
+from IPython import embed
 # Create your views here.
 
 def index(request):
@@ -14,7 +15,7 @@ def create(request):
         form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save(commit=False)
-            article.user = request.user
+            article.user = request.user  # 만든 사람
             article.save()
             return redirect('articles:index')
     else:
@@ -29,9 +30,15 @@ def update(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
     if request.method == 'post':
         form = ArticleForm(request.POST, instance=article)
+        
         if form.is_valid():
             form.save()
             return redirect('articles:index')
     else:
         form = ArticleForm(instance=article)
-    return render()
+    return render(request, 'articles/update.html', {'form' : form})
+
+def delete(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    article.delete()
+    return redirect('articles:index')

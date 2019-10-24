@@ -4,8 +4,8 @@ from django.conf import settings
 class Article(models.Model):
     title = models.TextField()
     content = models.TextField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    like = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='articles')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete='models.CASCADE')
+    like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='articles', blank=True)
 
 class Comment(models.Model):
     comment = models.TextField()

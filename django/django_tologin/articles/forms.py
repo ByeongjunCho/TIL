@@ -4,7 +4,7 @@ from django import forms
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        exclude=('user',)
+        exclude=('user','like')
 
 class CommentForm(forms.ModelForm):
     class Meta:
