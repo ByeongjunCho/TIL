@@ -7,6 +7,7 @@ const me = {
     },
     // 메서드 function 키워드만 작성하자!
     greeting: function() {
+        console.log(this) // me
         console.log(`hi ${this.name}`)
     },
     greeting2: () => {

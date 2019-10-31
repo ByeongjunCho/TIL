@@ -593,3 +593,232 @@ bg.appendChild(newDino)
 
 * 만든 tag를 기존의 값에 입력
 
+### 1. 버튼 생성 예제
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Todo List</h1>
+  <h1>
+    <div id="time"></div>
+  </h1>
+  <form action="" id="form">
+    <label for="input">할 일을 입력하세요</label>
+    <input type="text" id="input">
+    <button id="input-button" type="submit">+</button>
+  </form>
+  <ul id="todo-list">
+    <li> +버튼이 눌리면 리스트에 추가되도록 구현하세요. </li>
+  </ul>
+
+  <script>
+    const form = document.querySelector('#form')
+    const input = document.querySelector('#input')
+    const button = document.querySelector('#input-button')
+    const todos = document.querySelector('#todo-list')
+    button.addEventListener('click', function (event) {
+      // const input = event.target.previousElementSibling // 이벤트가 발생한 대상
+      if (input.value) { // 예외 처리 - #input에 데이터가 있다면
+        event.preventDefault() // form tag의 action을 disable
+        // li 하나를 만들어서
+        const li = document.createElement('li')
+        // 값을 넣고
+        console.log(this.previousElementSibling) // 이벤트가 발생한 대상
+        const deleteButton = document.createElement('button') // 삭제버튼 생성
+        deleteButton.style.marginLeft = '10px'  
+        deleteButton.innerText = '삭제'
+        // todo-list에 붙인다.
+        li.innerText = input.value + document.getElementById('#time')
+        li.appendChild(deleteButton) // deleteButton 추가
+        deleteButton.addEventListener('click', function (event) { // deleteButton에 대한 이벤트
+          li.remove()
+        })
+
+        input.value = ''
+
+        // li.innerText = document.getElementById('input').value
+        // document.getElementById('input').value = ""
+        todos.appendChild(li)
+
+        // 삭제버튼 이벤트
+
+      } else {
+        alert('내용을 입력하세요')
+      }
+    })
+
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      }
+      return i;
+    }
+
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      // add a zero in front of numbers<10
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+      t = setTimeout(function () {
+        startTime()
+      }, 500);
+    }
+    startTime();
+  </script>
+</body>
+</html>
+```
+
+
+
+## 7. Javascript 실행구조
+
+* 이벤트 루프 : call stack, callback queue 확인
+  * call stack이 비어있으면, callback queue에서 call stack으로 이동
+  * 이벤트(함수실행...)
+  * tick(틱)
+* synchronous/Asynchronous
+* blocking/non-blocking
+
+```javascript
+function a() {
+    console.log('a')
+}
+
+console.log('hi')   // 1.
+setTimeout(a, 3000)  // 3.
+console.log('bye') // 2.
+```
+
+```javascript
+function printHello() {
+    console.log('Helloooo')
+}
+
+function baz() {
+    console.log('baz') // 1
+    setTimeout(printHello, 0) // 3
+    console.log('baz end') // 2
+}
+
+
+function bar() {
+    console.log('bar')
+    baz()
+}
+
+function foo() {
+    console.log('foo')
+    bar()
+}
+
+foo()
+```
+
+* foo()가 실행되면 출력은 foo - bar - baz - baz end - Helloooo
+
+ ![img](https://miro.medium.com/max/800/1*i9nTlOSPH3q-sCd5-WHg-g.png) 
+
+[자바스크립트 동작 원리]( [https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A3%A8%ED%94%84%EC%99%80-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%98-%EB%B6%80%EC%83%81-async-await%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%BD%94%EB%94%A9-%ED%8C%81-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-df65ffb4e7e](https://engineering.huiseoul.com/자바스크립트는-어떻게-작동하는가-이벤트-루프와-비동기-프로그래밍의-부상-async-await을-이용한-코딩-팁-다섯-가지-df65ffb4e7e) )
+
+## 8. axios
+
+* axios는 비동기 구조의 한계점을 해결하기 위한 새로운 방법이다.
+
+```javascript
+console.log('hi')
+axios.get('https://jsonplaceholder.typicode.com/posts/1') // 요청을 보내고
+    .then( response => {        // 끝난다면 그때 함수를 실행 해 달라
+        console.log(response)
+        return response.data
+    })
+console.log('bye')
+```
+
+* axios로 보낸 요청 결과가 온다면 바로 실행될 수 있도록 한다.
+* callback function을 일일이 쌓을 필요 없이 사용할 수 있다.
+
+### 1. Django 좋아요 javascript로 비동기형식 만들기
+
+```html
+<i id="like-button" data-id="{{article.id}}" class="fas fa-heart fa-2x" style="color: red;"></i>
+```
+
+* data-X : X에 관한 값들을 저장한다.
+
+```json
+dataset = {
+    id: ....,
+    name: .....,
+    .....
+}
+```
+
+* django에서 데이터값을 .json형식으로 보낼 수 있다.
+
+```python
+# views.py
+from django.http import JsonResponse
+@login_required
+def like(request, article_pk):
+    # 좋아요를 눌렀다면
+    article = Article.objects.get(pk=article_pk)
+    if request.user in article.like_users.all():
+        # 좋아요 취소 로직
+        article.like_users.remove(request.user)
+        is_liked = False
+    # 아니면
+    else:
+        # 좋아요 로직
+        article.like_users.add(request.user)
+        is_liked = True
+    
+    context = {
+        'is_liked': is_liked, 
+        'like_count': article.like_users.count()
+        }
+    return JsonResponse(context)
+```
+
+* 좋아요를 담당하는 html 태그를 가지고 와서 변형한다.
+
+```html
+<!-- detail.html -->
+<script>
+    const likeButton = document.querySelector('#like-button')
+    likeButton.addEventListener('click', function (event) {
+        console.log(event.target.dataset.id) // 미리 저장한 article.id를 불러온다
+        axios.get(`/articles/${event.target.dataset.id}/like/`) // 주소로 요청
+            .then(response => {
+                console.log(response) // 요청받은 데이터 확인
+                console.log(event.target) // 현재 html 파일에 있는 데이터
+                const likeCount = document.querySelector('#like-count')
+                if (response.data.is_liked){
+                    event.target.classList.remove('far')
+                    event.target.classList.add('fas')
+                    likeCount.innerText = `${response.data.like_count}`
+                }
+                else
+                {
+                    event.target.classList.remove('fas')
+                    event.target.classList.add('far')
+                    likeCount.innerText = `${response.data.like_count}`
+                }
+            })
+    })
+</script>
+```
+
