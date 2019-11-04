@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style> 
+      
+    </style>
+</head>
+
+<body>
+  <div id="app">
+    {{todos}}
+    <!-- 
+    디렉티브
+    v-for : 반복문
+    v-if : 조건문
+    같이 작성을 하게 되면, 매 반복에 if를 체크 
+    -->
+    <hr>
+    <img v-bind:src="logo" alt=""> <br>
+    <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo"> <br>
+    
+    <li v-for="todo in todos" v-if="!todo.completed" v-on:click="toggleCompleted(todo)">
+      {{ todo.content }}
+    </li>
+    <li v-else v-on:click="toggleCompleted(todo)">
+      <del>{{todo.content}}</del>
+    </li>
+  </div>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        newTodo:'',
+        logo: 'https://avatars2.githubusercontent.com/in/5534?s=128&v=4',
+        todos: [
+          {
+            content: '수업 열심히 듣기',
+            completed: true
+          },
+          {
+            content: '밥 먹기',
+            completed: false
+          },
+          {
+            content: '롤 하기',
+            completed: false
+          },
+        ]
+      },
+      methods: {
+        toggleCompleted: function(todo){
+          console.log(todo)
+          todo.completed = !todo.completed
+        },
+        addTodo: function(){
+          this.todos.push({
+            content: this.newTodo, completed: false
+          })
+          this.newTodo = ''  
+        }
+      }
+
+
+    })
+  </script>
+</body>
+</html>

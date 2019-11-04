@@ -511,6 +511,8 @@ myNumbers.every(function(number){
 
 ## 5. Object
 
+### 1. object 생성
+
 ```javascript
 const me = {
     // 프로퍼티
@@ -560,6 +562,43 @@ var b = 3
 window.a  // 1
 window.b  // 3
 ```
+
+### 2. 함수를 이용한 object 생성(생성자 함수)
+
+```javascript
+// object 함수 구현
+const Person = function(name, phone){
+    this.name = name
+    this.phone = phone
+    this.greeting = function(){
+        return 'hi, ' + this.name
+    }
+}
+
+const ho = new Person('u', '123-456-7890')
+
+// 생성자 함수에서는 arrow function 사용 금지
+const Animal = name => {
+    this.name = name
+}
+```
+
+### 3. object 리터럴 이용
+
+```javascript
+const name = 'nugu'
+const phone = '010-1234-1324'
+const greeting = function() {
+    return 'hi ,' + this.name
+}
+const you = {
+    name,
+    phone,
+    greeting
+}
+```
+
+
 
 ## 6. DOM 조작(Document Object Model)
 
@@ -822,3 +861,182 @@ def like(request, article_pk):
 </script>
 ```
 
+### 2. POST 형식으로 변경하기
+
+```javascript
+<script>
+    const likeButton = document.querySelector('#like-button')
+    likeButton.addEventListener('click', function (event) {
+        console.log(event.target.dataset.id)
+        axios.defaults.xsrfCookieName = 'csrftoken'  // csrf token cookie
+        axios.defaults.xsrfHeaderName = 'X-CSRFToken' // csrf token header
+        axios.post(`/articles/${event.target.dataset.id}/like/`)  // axios post형식 변경
+            .then(response => {
+                console.log(response)
+                console.log(event.target)
+                const likeCount = document.querySelector('#like-count')
+                if (response.data.is_liked){
+                    event.target.classList.remove('far')
+                    event.target.classList.add('fas')
+                    likeCount.innerText = `${response.data.like_count}`
+                }
+                else
+                {
+                    event.target.classList.remove('fas')
+                    event.target.classList.add('far')
+                    likeCount.innerText = `${response.data.like_count}`
+                }
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+    })
+```
+
+### 3. views.py like함수 분기를 위한 설정
+
+```python
+@login_required
+def like(request, article_pk):
+    # 좋아요를 눌렀다면
+    # django는 모든 데이터를 request를 이용해 판단하기 때문에 요청을 보내면서 필요한 header를 보내줘야 한다.
+    if request.is_ajax():  # 분기를 위한 설정 => javascript 에 추가 명령어 필요
+        article = Article.objects.get(pk=article_pk)
+        if request.user in article.like_users.all():
+            # 좋아요 취소 로직
+            article.like_users.remove(request.user)
+            is_liked = False
+        # 아니면
+        else:
+            # 좋아요 로직
+            article.like_users.add(request.user)
+            is_liked = True
+        
+        context = {
+            'is_liked': is_liked, 
+            'like_count': article.like_users.count()
+            }
+        return JsonResponse(context)
+    else:
+        return HttpResponseForbidden()
+```
+
+```javascript
+<script>
+    const likeButton = document.querySelector('#like-button')
+    likeButton.addEventListener('click', function (event) {
+        console.log(event.target.dataset.id)
+        // POST 요청 csrftoken을 AJAX 요청시 설정하는 법
+        axios.defaults.xsrfCookieName = 'csrftoken'
+        axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+        // django is_ajax() 분기가 되는 기준이 아래의 헤더 설정에 따라서 진행
+        axios.defaults.headers.common['X-REQUESTED-WITH'] = 'XMLHttpRequest'
+        ......
+</script>
+```
+
+
+
+## 9. promise
+
+### 1. 비동기 처리
+
+```javascript
+// 데이터를 외부로부터 받아와서 변수에 저장하고 출력하는 함수
+// 1. 비동기 X
+function getData() {
+    const data = {'data': 'some data'}
+    return data
+}
+
+let response = getData()
+console.log(response)
+
+// 2. setTimeout
+function getData() {
+    let data
+    setTimeout(function () {
+        console.log('요청을 보냈습니다.')
+        data = {'data': 'some data'}
+    }, 1000)
+    return data
+}
+
+let response1 = getData()
+console.log(response1)  // undefined
+```
+
+### 2. 비동기 처리를 위한 callback 함수 정의
+
+* 해당 작업을 하는 함수를 인자로 받아서 나중에 callback함수를 부른다.
+
+```javascript
+// 3. callback function 정의
+function getDataCallback(callback) {
+    // callback = 저함수
+    setTimeout(function(){
+        console.log('요청을 보냈습니다.')
+        const data = {'data': 'some data'} // 데이터 도착
+        callback(data) // 내가 원하는 작업 시작
+    }, 1000)
+}
+
+// 함수 호출, 인자로 함수를 넘겨주는데 그게 출력하는 작업
+getDataCallback(function(data) {
+    let response2 = data
+    console.log(response2)
+})
+```
+
+### 3. promise
+
+* Promise object를 리턴한다. 나중에(작업이 끝나면) then/catch를 실행한다.
+
+```
+promise object 상태
+- pending -> 작업 진행중
+- resolved -> resolve 함수 호출(작업 성공시)
+- rejected -> reject 함수 호출(작업 실패시)
+
+resolve -> then에서 처리, reject -> catch에서 처리
+```
+
+```javascript
+function getDataPromise() {
+    return new Promise(resolve => {
+        setTimeout(function(){
+            console.log('요청을 보냈습니다.')
+            const data = {'data': 'some data'} // 데이터 도착
+            resolve(data) // 내가 원하는 작업 시작
+        }, 1000)
+    })
+}
+
+let response3 = getDataPromise()
+console.log(response3)  // 1. 출력(pending)
+// 다시 확인하면
+console.log(response3) // 2. 출력 (resolved)
+response3.then(response => console.log(response)) // 3. data 출력
+
+getDataPromise()
+    .then(response => console.log(response3))
+```
+
+### 4. async / await
+
+```javascript
+function getDataPromise() {
+    return new Promise(resolve => {
+        setTimeout(function(){
+            console.log('요청을 보냈습니다.')
+            const data = {'data': 'some data'} // 데이터 도착
+            resolve(data) // 내가 원하는 작업 시작
+        }, 1000)
+    })
+}
+
+async function printData() {
+    const response = await getDataPromise()
+    console.log(response)
+}
+```
