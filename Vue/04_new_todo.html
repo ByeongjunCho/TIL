@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <h1>오늘의 할일</h1>
+    <todo-list category="취업준비"></todo-list>
+    <todo-list category="싸피"></todo-list>
+    <todo-list category="개인"></todo-list>
+  </div>
+
+  <script>
+    // 컴포넌트 선언부  
+    Vue.component('todo-list', {
+      template: `<div class="todo-list">
+        <h2>{{category}}</h2>
+        <input v-model="newTodo" type="text">
+        <button v-on:click="addTodo">할일 추가</button>
+        {{todos}}
+        <!-- 할일 목록 나열 -->
+        <li v-for="todo in todos" :key="todo.id">{{todo.content}} <button v-on:click="removeTodo(todo.id)">일 삭제</button>
+        </li>
+      </div>`,
+      props: {
+        category: {
+          type: String,
+          required: true
+        },
+      },// 하위컴퍼넌트로 데이터 전송
+      data: function () {
+        return {
+          todos: [],
+          newTodo: ''
+        }
+      },
+      methods: {
+        addTodo() {
+          this.todos.push({
+            id: Date.now(),
+            content: this.newTodo
+          })
+          this.newTodo = ''
+        },
+        removeTodo(id) {
+          this.todos = this.todos.filter(todo => {
+            return !(todo.id === id)
+          })
+        },
+      },
+
+    })
+  </script>
+  
+  <script>
+    // 루트 오브젝트
+    const app = new Vue({
+      el: '#app',
+    })
+  </script>
+
+  <script>
+    // const app = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     newTodo1: '',
+    //     newTodo2: '',
+    //     newTodo3: '',
+    //     todos1: [],
+    //     todos2: [],
+    //     todos3: []
+    //   },
+    //   methods: {
+    //     addTodo() {
+    //       this.todos.push({
+    //         id: Date.now(),
+    //         content: this.newTodo
+    //       })
+    //       this.newTodo = ''
+    //     },
+    //     removeTodo(id) {
+    //       this.todos = this.todos.filter(todo => {
+    //         return !(todo.id === id)
+    //       })
+    //     },
+    //   },
+    // })
+  </script>
+
+
+</body>
+
+</html>

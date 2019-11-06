@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <a v-bind:href="url"></a>
+  <a :href="url"></a>
+  <a v-on:click="doSomething"></a>
+  <a @click="doSomething"></a>
+  <div class="static" v-bind:class="{active: isActive, error:hasError}">1</div>
+  <div id='font' v-bind:style="{color: activeColor, 'fontSize': fontSize + 'px'}">2</div>
+  <script>
+    const static = new Vue({
+      el: '.static',
+      data: {
+        isActive: true,
+        hasError: false,
+        
+      }
+    })
+    const font = new Vue({
+      el: '#font',
+      data: {
+        activeColor: 'red',
+        fontSize: 30
+      }
+    })
+  </script>
+</body>
+</html>

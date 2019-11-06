@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <button @click="changeColor">컬러변경</button>
+    <p :class="{red:!isBlue, blue: isBlue}">호홍홍</p>
+    <p :style="{color: colorName}">컬러</p>
+    <input v-model.trim="message" type="text">
+    <input v-model.number="number" type="number"> 
+    <select v-model="jiwoo.pokemon" name="" id="">
+      <option value="꼬부기">꼬부기</option>
+      <option value="이상해씨">이상해씨</option>
+      <option value="파이리">파이리</option>
+    </select>
+    <input v-model="checked" type="checkbox" name="" id="">
+    <input v-model="type" value="물" type="radio" name="" id="water">
+    <label for="water">물</label>
+    <input v-model="type" value="불" type="radio" name="" id="fire">
+    <label for="water">불</label>
+    <input v-model="type" value="풀" type="radio" name="" id="green">
+    <label for="water">풀</label>
+  </div>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        isBlue: true,
+        colorName: 'red',
+
+        jiwoo: {
+          pokemon: '',
+        },
+        message: '',
+        number: 0,
+        select: '',
+        checked: true,
+        type: ''
+      },
+      methods: {
+        changeColor() {
+          this.isBlue = !this.isBlue
+          if (this.colorName === 'red'){
+            this.colorName = 'blue'
+          }
+          else {
+            this.colorName = 'red'
+          }
+        }
+      }
+    })
+  </script>
+</body>
+</html>
