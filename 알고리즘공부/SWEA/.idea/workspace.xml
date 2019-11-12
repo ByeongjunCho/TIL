@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="429a47df-4e5b-4bc1-b0d0-4c6108a5719b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Stack2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Stack2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack2/4875_미로.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Stack2/4875_미로.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack2/4880_토너먼트 카드게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Stack2/4880_토너먼트 카드게임.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../모의시험/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../모의시험/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../모의시험/.idea/모의시험.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../모의시험/.idea/모의시험.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../모의시험/Shuffle-O-Matic 2019.py" beforeDir="false" afterPath="$PROJECT_DIR$/../모의시험/Shuffle-O-Matic 2019.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SWEA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SWEA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../백준/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../백준/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,43 +17,116 @@
     <session id="1610240602">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
-          <entry key="txt" value="1" />
+          <entry key="py" value="16" />
+          <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="5" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="6" />
-          <entry key="py" value="2923" />
+          <entry key="Python Console" value="56" />
+          <entry key="py" value="9944" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2929" />
+          <entry key="Python" value="10000" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/5789-현주의상자바꾸기.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5643_키순서.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="176">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding>
+                <marker date="1573519121763" expanded="true" signature="63:338" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4008_숫자만들기.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding>
+                <marker date="1573539985594" expanded="true" signature="378:814" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2117_홈방범서비스.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <marker date="1573549132769" expanded="true" signature="28:33" ph="..." />
+                <marker date="1573549132769" expanded="true" signature="960:964" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notebook.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="20" column="15" lean-forward="true" selection-end-line="20" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2383_점심식사시간.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-437">
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+              <folding>
+                <marker date="1573546157628" expanded="true" signature="777:781" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:782" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:785" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:786" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:788" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:789" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:793" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:796" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:797" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:801" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:802" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:805" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:806" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:808" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:809" ph="..." />
+                <marker date="1573546157628" expanded="true" signature="777:811" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4383_input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="61" selection-start-line="61" selection-end-line="70" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -69,6 +140,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>K</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -80,14 +156,23 @@
         <option value="$PROJECT_DIR$/5356-세로로말하기.py" />
         <option value="$PROJECT_DIR$/1979-어디에단어가들어갈수있을까.py" />
         <option value="$PROJECT_DIR$/5789-현주의상자바꾸기.py" />
+        <option value="$PROJECT_DIR$/5643_키순서.py" />
+        <option value="$PROJECT_DIR$/5643_input.txt" />
+        <option value="$PROJECT_DIR$/1949_등산로조성.py" />
+        <option value="$PROJECT_DIR$/4008_숫자만들기.py" />
+        <option value="$PROJECT_DIR$/4008_input.txt" />
+        <option value="$PROJECT_DIR$/4383_input.txt" />
+        <option value="$PROJECT_DIR$/2383_점심식사시간.py" />
+        <option value="$PROJECT_DIR$/notebook.py" />
+        <option value="$PROJECT_DIR$/2117_홈방범서비스.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="689" />
-    <option name="y" value="47" />
-    <option name="width" value="1118" />
-    <option name="height" value="892" />
+    <option name="x" value="808" />
+    <option name="y" value="42" />
+    <option name="width" value="1041" />
+    <option name="height" value="888" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -97,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,10 +193,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../백준" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -127,8 +212,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.5789-현주의상자바꾸기">
-    <configuration name="1493-수의새로운연산" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.notebook">
+    <configuration name="1949_등산로조성" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SWEA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,7 +225,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1493-수의새로운연산.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1949_등산로조성.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,7 +234,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1979-어디에단어가들어갈수있을까" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2383_점심식사시간" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SWEA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,7 +246,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1979-어디에단어가들어갈수있을까.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2383_점심식사시간.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,7 +255,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2805-농작물수확하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="4008_숫자만들기" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SWEA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -182,7 +267,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2805-농작물수확하기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4008_숫자만들기.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,7 +276,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="5356-세로로말하기" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="5643_키순서" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SWEA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -203,7 +288,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5356-세로로말하기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5643_키순서.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,7 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="5789-현주의상자바꾸기" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="notebook" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SWEA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,7 +309,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/5789-현주의상자바꾸기.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/notebook.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -234,19 +319,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.1493-수의새로운연산" />
-      <item itemvalue="Python.2805-농작물수확하기" />
-      <item itemvalue="Python.5356-세로로말하기" />
-      <item itemvalue="Python.1979-어디에단어가들어갈수있을까" />
-      <item itemvalue="Python.5789-현주의상자바꾸기" />
+      <item itemvalue="Python.5643_키순서" />
+      <item itemvalue="Python.1949_등산로조성" />
+      <item itemvalue="Python.2383_점심식사시간" />
+      <item itemvalue="Python.notebook" />
+      <item itemvalue="Python.4008_숫자만들기" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.5789-현주의상자바꾸기" />
-        <item itemvalue="Python.1979-어디에단어가들어갈수있을까" />
-        <item itemvalue="Python.5356-세로로말하기" />
-        <item itemvalue="Python.1493-수의새로운연산" />
-        <item itemvalue="Python.2805-농작물수확하기" />
+        <item itemvalue="Python.notebook" />
+        <item itemvalue="Python.2383_점심식사시간" />
+        <item itemvalue="Python.4008_숫자만들기" />
+        <item itemvalue="Python.1949_등산로조성" />
+        <item itemvalue="Python.5643_키순서" />
       </list>
     </recent_temporary>
   </component>
@@ -264,26 +349,46 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="689" y="47" width="1118" height="892" extended-state="0" />
+    <frame x="808" y="42" width="1041" height="888" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21944444" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20638086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2628798" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44488713" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4039088" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.47952443" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16395864" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36387783" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40422723" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.47952443" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -293,10 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <marker date="1567061089858" expanded="true" signature="328:392" ph="..." />
-            <marker date="1567061089858" expanded="true" signature="408:409" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -304,13 +405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979-어디에단어가들어갈수있을까.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -324,10 +418,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1979-어디에단어가들어갈수있을까.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/5789-현주의상자바꾸기.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="176">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1949_등산로조성.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+          <folding>
+            <marker date="1573536810507" expanded="true" signature="96:480" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5643_키순서.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <marker date="1573519121763" expanded="true" signature="63:338" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4008_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4008_숫자만들기.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <marker date="1573539985594" expanded="true" signature="378:814" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5643_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="54" column="15" lean-forward="true" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4383_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="61" selection-start-line="61" selection-end-line="70" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2383_점심식사시간.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+          <folding>
+            <marker date="1573546157628" expanded="true" signature="777:781" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:782" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:785" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:786" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:788" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:789" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:793" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:796" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:797" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:801" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:802" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:805" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:806" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:808" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:809" ph="..." />
+            <marker date="1573546157628" expanded="true" signature="777:811" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="15" lean-forward="true" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2117_홈방범서비스.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <marker date="1573549132769" expanded="true" signature="28:33" ph="..." />
+            <marker date="1573549132769" expanded="true" signature="960:964" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

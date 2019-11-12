@@ -1,26 +1,25 @@
-# def find_max_index(values):
-#     max_value = 0
-#     for i in range(len(values) - 1):
-#         if max_value >= values[i]:
-#             return i
-#         elif values[i] < values[i+1]:
-#             max_value = values[i]
-#         else:
-#             return i
-#     else:
-#         return i + 1
+def makefilter(K):
+    N = 2*(K-1) + 1
+    count = 0
+    vec2 = [[0 for _ in range(N)] for _ in range(N)]
+    for i in range(N//2):
+        count = 2*i + 1
+        for j in range(K-i-1, N):
+            vec2[i][j] = 1
+            count -= 1
+            if not count:
+                break
+    c = N
+    for i in range(N//2, N):
+        count = c
+        for j in range(i-K+1, N):
+            vec2[i][j] = 1
+            count -= 1
+            if not count:
+                break
+        c -= 2
+    return vec2
 
-# l1 = [1, 1, 3, 1, 2]  
-# print(find_max_index(l1))
-
-
-test_case = int(input())
-test_list = []
-for i in range(1, test_case + 1):
-    result = 0
-    tmp = input()
-    test_list = tmp.split()
-    test_list.sort(key=int)
-    for n in test_list[1:9]:
-        result += int(n)
-    print(f'#{i} {round(result/8)}')
+arr = makefilter(5)
+for a in arr:
+    print(a)
