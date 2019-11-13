@@ -4,13 +4,13 @@ def conv(window, filter, K):
     w_r = len(filter)
     w_c = w_r
     slide = row
-    result = 0
+    result = 0  # 집의 최대값 출력
     for r in range(1-K, slide):
         for c in range(1-K, slide):
             house = 0
             for i in range(w_r):
                 for j in range(w_c):
-                    if 0 <= r < row or 0 <= c < col:
+                    if 0 <= r+i < row and 0 <= c+j < col:
                         house += window[r+i][c+j]*filter[i][j]
             result = max(result, house)
     return result
@@ -42,8 +42,15 @@ for tc in range(1, int(input()) + 1):
     N, M = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
 
-    K = 1
-    while True:
-        wind = makefilter(K)
-        house = conv(wind, arr, K)
-        if house * M <
+    K = N+2
+    bhouse = 0
+    while K:
+        fil = makefilter(K)
+        house = conv(arr, fil, K)
+        if house * M >= K*K + (K-1)*(K-1):
+            bhouse = house
+            break
+        else:
+            # bhouse = house
+            K -= 1
+    print('#{} {}'.format(tc, bhouse))
