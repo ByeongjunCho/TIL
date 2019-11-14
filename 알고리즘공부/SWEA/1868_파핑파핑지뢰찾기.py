@@ -43,7 +43,7 @@ for tc in range(1, 1+int(input())):
     for i in range(N):
         for j in range(N):
             if not visit[i][j] and arr[i][j] !='*':
-                bfs((i, j))
+                # bfs((i, j))
                 count += 1
 
 

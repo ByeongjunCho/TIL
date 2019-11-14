@@ -37,10 +37,6 @@ def tour(r, c, left, right):  # 왼쪽 길이, 오른쪽 길이
             else:
                 return
 
-        for i in range(len(s)):
-            if s[i]:
-                print(i)
-        print(r,c,left, right)
         return True
     except:
         return False
@@ -48,7 +44,7 @@ def tour(r, c, left, right):  # 왼쪽 길이, 오른쪽 길이
 
 def maxtour():
     K = N - 1
-    while K > 2:
+    while K > 1:
         for r in range(N):
             for c in range(N):
                 for i in range(1, K):
@@ -65,4 +61,4 @@ for tc in range(1, 1+int(input())):
     arr = [list(map(int, input().split())) for _ in range(N)]
 
 
-    tour(0, 1, 1, 1)
+    print('#{} {}'.format(tc, maxtour()))

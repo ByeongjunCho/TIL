@@ -128,6 +128,7 @@ def dfs(k, r, c):
         # 위로 가는 경우
         if 0 <= r-1 < N and arr[r-1][c] not in [0, 3, 4, 7] and not D[r-1][c]:
             dfs(k+1, r-1, c)
+
         # 오른쪽
         if 0 <= c+1 < M and arr[r][c+1] not in [0, 2,4,5] and not D[r][c+1]:
             dfs(k+1, r, c+1)
