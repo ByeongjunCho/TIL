@@ -6,7 +6,8 @@ for tc in range(1, 1+int(input())):
 
     # 좌표를 dict 에 입력
 
-    cell = {}
+    cell = {}  # 살아있는 세포
+    deadcell = set()  # 죽은세포
     for i in range(N):
         for j in range(M):
             if arr[i][j]:
@@ -30,22 +31,15 @@ for tc in range(1, 1+int(input())):
                     if (wy, wx) not in keys and cell.get((wy, wx)) and cell.get((wy, wx))[0] == -cell.get((wy, wx))[1] and cell.get((wy, wx))[0] < val[0]:
                         cell.update({(wy, wx): [val[0], -val[0]]})
                     # 복사하려는 자리에 cell이 없다면
-                    elif not cell.get((wy, wx)):
+                    elif not cell.get((wy, wx)) and (wy, wx) not in deadcell:  # deadcell.get((wy, wx))
                         cell.update({(wy, wx): [val[0], -val[0]]})
-                    # 복사하려는 자리의 생명력이 넣을 값보다 크다면
-                    # elif cell.get((wy, wx)) and cell.get((wy, wx))[0] == -cell.get((wy, wx))[1] and cell.get((wy, wx))[0] >= val[0]:
-                    #     continue
-                    # 이미 자리를 차지한 값이면서 최근것이 아니면
-                    # elif cell.get((wy, wx)) and cell.get((wy, wx))[0] > cell.get((wy, wx))[1]:
-                    #     continue
+                if val[0] == val[1] +1:
+                    cell.pop(k)
+                    deadcell.add(k)
 
     for _ in range(K):
         clone()
 
-    # print(cell)
-    count = 0
-    for val in cell.values():
-        if val[0] > val[1]:
-            count += 1
+    count = len(cell)
 
     print('#{} {}'.format(tc, count))

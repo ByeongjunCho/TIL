@@ -2,7 +2,7 @@ V, E = map(int, input().split())
 Edge = [tuple(map(int, input().split())) for _ in range(E)] #(u, v, w)
 
 # disjoin-set
-p = [x for x in range(V)]  # 0 ~ V-1
+p = [x for x in range(V+1)]  # 0 ~ V-1
 
 def find_set(x):
     if x != p[x]:

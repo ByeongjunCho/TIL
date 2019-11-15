@@ -1,9 +1,6 @@
 # 2105. [모의 SW 역량테스트] 디저트 카페
 
 def tour(r, c, left, right):  # 왼쪽 길이, 오른쪽 길이
-    # if r+left < 0 or c-left < 0 or r+left+right > N or c-left+right > N:
-    #         return
-
     row = r
     col = c
     s = [0] * 101
@@ -48,7 +45,9 @@ def maxtour():
         for r in range(N):
             for c in range(N):
                 for i in range(1, K):
-                    if tour(r, c, i, K-i):
+                    if r + K > N or c-i < 0 or c -2*i+K > N:
+                        continue
+                    elif tour(r, c, i, K-i):
                         return K*2
         K -= 1
 

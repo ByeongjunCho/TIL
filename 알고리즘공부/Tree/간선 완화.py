@@ -19,7 +19,7 @@ def BFS(s):
     D = [0xffffff] * (V + 1) # D[] 초기값 설정
     # visit = [False] * (V + 1)
     Q = deque()
-    Q.append(s);
+    Q.append(s)
     D[s] = 0
 
     while Q:

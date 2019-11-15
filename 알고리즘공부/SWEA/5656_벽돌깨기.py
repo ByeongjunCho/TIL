@@ -59,7 +59,6 @@ def start(k):
 for tc in range(1, int(input()) + 1):
     N, W, H = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(H)]
-    copyarr = deepcopy(arr)
     result = 0xffffff
     s = []
     start(0)
