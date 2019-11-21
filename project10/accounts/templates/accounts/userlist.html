@@ -1,0 +1,7 @@
+{% extends 'movies/base.html' %}
+{% block body %}
+  {% for u in userlist %}
+    <a href="{% url 'accounts:profile' u.pk %}">{{u.username}}</a>
+  {% endfor %}
+  
+{% endblock  %}

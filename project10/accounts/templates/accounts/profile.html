@@ -1,0 +1,28 @@
+{% extends 'movies/base.html' %}
+{% block body %}
+  <h1>{{user_profile.username}}의 프로필</h1>
+  <hr>
+  <h2>리뷰 목록</h2>
+  <hr>
+  {% for review in user_profile.review_set.all %}
+    <p>영화제목 : {{review.movie_id.title}}</p>
+    <p>내용 : {{review.content}}</p>
+    <p>점수 : {{review.score}}</p>
+    <hr>
+  {% endfor %}
+  <h2>좋아요를 누른 영화 목록</h2>
+  {% for movie in user.like_movie.all %}
+  <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+  {% endfor %}
+  <hr>
+  {% if user in user_profile.followers.all %}
+    <a href="{% url 'accounts:follow' user_profile.pk %}">팔로우취소</a>
+  {% else %}
+    <a href="{% url 'accounts:follow' user_profile.pk %}">팔로우</a>
+  {% endif %}
+  {% comment %} {% for movie in user_prfile.like_move %}{% endfor %} {% endcomment %}
+
+  <h2>팔로우 : {{user_profile.followings.all.count}}</h2>
+  <h2>팔로워 : {{user_profile.followers.all.count}}</h2>
+
+{% endblock  %}

@@ -5,16 +5,17 @@ class Genre(models.Model):
     name = models.CharField(max_length=30)  # 장르 구분
 
 class Movie(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=30)
     audience = models.IntegerField()
-    poster_url = models.CharField(max_length=200)
+    poster_url = models.CharField(max_length=140)
     description = models.TextField()
     genre_id = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    # genre = models.ManyToManyField(Genre, related_name='movie_genre', blank=True)
     like_movies_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movie', blank=True)
     
 
 class Review(models.Model):
-    content = models.CharField(max_length=50)
+    content = models.CharField(max_length=140)
     score = models.IntegerField()
     movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
     user_id = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

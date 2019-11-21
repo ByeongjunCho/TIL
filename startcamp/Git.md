@@ -181,7 +181,31 @@ profile.jpg # profile.jpg 파일
 3. 직접 코드 수정
    * 수정된 데이터는 그때그때 add, commit 를 하여 commit message가 꼬이지 않게 만들어야 좋다.
 4. fork한 저장소로 push
-5. 수정 후 상대방에게 merge요청
+5. 수정 후 상대방에게 merge요청(pull request)
+6. 내 로컬 업데이트
+   - upstream이라는 이름으로 원격 저장소 설정
+   - git remote add upstream __원본 주소__
+   - git pull upstream master
+
+### 1. 특정 파일을 커밋 이력에서 삭제하고 다만 파일은 유지할 경우
+
+```bash
+$ git rm --cached db.sqlite3
+```
+
+* 위 명령어 작성 후 `.gitignore`에 `db.sqlite3`등록
+
+### 2. unstage
+
+```bash
+$ git reset HEAD <file>
+```
+
+### 3. 커밋 메시지 수정
+
+```bash
+$ git commit --amend
+```
 
 
 
@@ -327,4 +351,6 @@ class : class=__BLUE__
 > * :wq => 저장하고 종료
 > * i => 입력 모드 전환
 > * 참조 : [https://cyberseo.tistory.com/entry/Vi-%EC%97%90%EB%94%94%ED%84%B0-%EC%82%AC%EC%9A%A9%EB%B2%95](https://cyberseo.tistory.com/entry/Vi-에디터-사용법)
+
+
 
