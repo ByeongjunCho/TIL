@@ -1,0 +1,11 @@
+movieCd,movieNm,movieNmEn,prdtYear,openDt,typeNm,prdtStatNm,nationAlt,genreAlt,repNationNm,repGenreNm,directors,companys
+20197336,허슬러,Hustlers,2019,,장편,개봉예정,미국,"범죄,드라마",미국,범죄,[{'peopleNm': '로렌 스카파리아'}],[]
+20190064,산타 앤 컴퍼니,Christmas & Co,2017,,장편,개봉예정,프랑스,판타지,프랑스,판타지,[{'peopleNm': '알랭 샤바'}],[]
+20191323,오렌지필름 기획전 - Fragile; 파손주의 ,,,,장편,기타,한국,,한국,,[],[]
+20171561,싱,SING,2016,,단편,기타,헝가리,드라마,헝가리,드라마,[{'peopleNm': '크리스토프 데아크'}],[]
+20191306,그녀의 대험한 유혹 ,,,,기타,기타,,,,,[{'peopleNm': '아사기리 조'}],[]
+20196781,우리를 갈라놓는 것들,Things That Do Us Part,2019,,장편,개봉예정,한국,다큐멘터리,한국,다큐멘터리,[{'peopleNm': '임흥순'}],"[{'companyCd': '20137935', 'companyNm': '반달'}]"
+20191322,러브 아일랜드, Love Island,,,장편,,,,,,[{'peopleNm': '김형협'}],[]
+20194781,평양을 즐겨요,Have Fun in Pyongyang,2018,,장편,기타,프랑스,다큐멘터리,프랑스,다큐멘터리,[],[]
+20195083,너의 여자친구,My Bossy Girl,2018,,장편,개봉예정,한국,"코미디,멜로/로맨스,드라마",한국,코미디,[{'peopleNm': '이장희'}],[]
+20196284,윤희에게,Moonlit Winter,2019,20191114,장편,개봉,한국,멜로/로맨스,한국,멜로/로맨스,[{'peopleNm': '임대형'}],"[{'companyCd': '20139335', 'companyNm': '영화사 달리기'}]"
