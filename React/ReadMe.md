@@ -1,10 +1,31 @@
 # React 기초
 
-## React Component
+## 준비사항
 
-```jsx
+> vs extentions 설치
+
+* ESLint
+* ES7 React/Redux/GraphQL/React....
+* Prettier - Code formatter
+* Ranbow Brackets
+
+webpack 설치
+
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+## 기본구조
+
+> Component : 데이터를 입력받아 DOM Node를 출력하는 함수
+
+> Conceptually, components are like JavaScript **functions**. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
+
+```react
 // App.js
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,13 +33,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
       </div>
     );
   }
@@ -27,67 +42,200 @@ class App extends Component {
 export default App;
 ```
 
-- `render`함수 필수
-- `export default`가 있어야 해당 컴포넌트를 다른 곳에서 사용할 수 있음
+- `render` : 컴포넌트가 나에게 보여주는 것
 
-```jsx
+```react
+//index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
 ```
 
-- import {component} form './{path}'로 컴포넌트를 불러옴
-- 브라우저에서 리액트 컴포넌트를 보여주기 위해 `ReactDOM.render`함수 사용
+> React : UI라이브러리
+>
+> ReactDom : 웹사이트에 React를 출력
+>
+> reactNative : 모바일에 React를 올리고 싶은 경우
 
->ReactDOM.render(렌더링 할 결과물, 컴포넌트를 그릴 DOM)
+- ReactDom은 단 한개의 Component를 출력한다.
+
+## React Component
+
+```react
+import React, {Component} from 'react';
+import './Movie.css';
+
+class Movie extends Component{
+  render(){
+    return(
+      <div>
+        <MoviePoster />
+        <h1>hello this is a movie</h1>
+      </div>
+    )
+  }
+}
+
+class MoviePoster extends Component{
+  render(){
+    return(
+      <img src="https://t1.daumcdn.net/cfile/tistory/24E61F335966F29A15" />
+    )
+  }
+}
+export default Movie;
+```
+
+> 컴포넌트 -> render -> return -> jsx 순으로 구성됨
+
+## props/stats
+
+```react
+// App.js
+import React, {Component} from 'react';
+import logo from './logo.svg';
+import './App.css';
+const movies = [
+    'abc',
+    'def'
+]
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+		<Movie title= {movies[0]} />
+         <Movie title = {movies[1]} />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+```react
+import React, {Component} from 'react';
+import './Movie.css';
+
+class Movie extends Component{
+  render(){
+    console.log(this.props)
+    return(
+      <div>
+        <MoviePoster />
+        <h1>hello this is a movie</h1>
+        <h1>{this.props.title}</h1>
+      </div>
+    )
+  }
+}
+```
+
+> 출력 -> 'abc'     'def'
+>
+> App.js -> Movie.js로 데이터를 보낼 수 있으며 Movie.js에서는 `props`를 이용하여 데이터를 확인할 수 있음
+
+## props 확인
+
+```react
+import React, {Component} from 'react';
+import './Movie.css';
+import propTypes from 'prop-types'
+
+class Movie extends Component{
+
+  static propTypes = {
+    title: propTypes.string.isRequired,
+    poster: propTypes.string
+  }
+  render(){
+    console.log(this.props)
+    return(
+      <div>
+        <MoviePoster poster={this.props.poster}/>
+        <h1>{this.props.title}</h1>
+      </div>
+    )
+  }
+}
+
+class MoviePoster extends Component{
+  static propTypes={
+    poster: propTypes.string.isRequired
+  }
+  render(){
+    console.log(this.props.poster)
+    return(
+      <img src={this.props.poster} />
+    )
+  }
+}
+export default Movie;
+```
+
+> props 변수명 : propTypes.{형식}.{필수여부} 
+>
+> props입력값의 형식과 필수여부를 결정한다.
+
+
+
+## Component 구조
+
+>  // Render : componentWillMount -> render() -> componentDidMount()
+>
+>  // Update componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidupdate()
+
+## state
+
+- component의 state가 변경되면, render가 다시 실행
+
+```react
+  
+state = {
+    greeting: "Hello!"
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        greeting: 'Hello again!'
+      })
+    }, 5000)
+  }
+```
+
+> state를 직접 변경할 수 없음 ex) this.state.greeting = "adffsd" 
+
+```react
+componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        movies: [
+          ...this.state.movies,   // <= this.state.movies : 현재값
+          {
+            title: "Transpotting",
+            poster: "https://m.media-amazon.com/images/M/MV5BMTM0NjQ4OTgyNV5BMl5BanBnXkFtZTcwOTU2MzQ4Nw@@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg"
+          }
+        ]
+      })
+    }, 1000)
+  }
+```
+
+> ...this.state.movies 가 존재하지 않으면 `state`의 movies는 새로운 것으로 대체됨
+>
+> infiniting movings
 
 ## jsx 기본구조
-
-```jsx
-import React, { Component } from 'react';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
-}
-
-export default App;
-```
-
-- 언제나 태그는 닫혀있어야 함
-- 두 개 이상의 엘리먼트는 하나의 엘리먼트로 감싸져있어야 함
-
-```jsx
-// src/App.js
-import React, { Component } from 'react';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        Hello
-      </div>
-      <div>
-        Bye
-      </div> // => 에러 발생(2개의 엘리먼트)
-    );
-  }
-}
-
-export default App;
-```
-
-- 위의 코드를 수정하여 하나의 엘리먼트로 감싸도록 수정해야 함
 
 ```jsx
 <div>
@@ -111,27 +259,6 @@ export default App;
           Bye
         </div>
 </Fragment>
-```
-
-## JSX 안에 자바스크립트 값 사용하기
-
-- JSX 내부에서 자바스크립트 변수값을 사용하기 위해서는 `{}`를 사용
-
-```jsx
-import React, { Component } from 'react';
-
-class App extends Component {
-  render() {
-    const name = 'react';
-    return (
-      <div>
-        hello {name}!
-      </div>
-    );
-  }
-}
-
-export default App;
 ```
 
 ## JSX 내부에서 조건부 렌더링
