@@ -16,30 +16,10 @@ class App extends Component {
   }
 
   componentDidMount(){
-    setTimeout(() => {
-      this.setState({
-        movies : [
-          {
-            title: "Matrix",
-            poster: "https://633987.smushcdn.com/907311/wp-content/uploads/2019/08/lede-the-matrix-1300x731.jpg?lossy=1&strip=1&webp=1"
-          },
-          {
-            title: "StarWars",
-            poster: "https://lumiere-a.akamaihd.net/v1/images/tros-hero-in-theaters-mobile-a_e8a421c0.jpeg?region=0,0,1024,626&width=960"
-          },
-          {
-            title: "Oldboy",
-            poster: "https://miro.medium.com/max/3910/1*PEYbHg2nNJ1Rxa_3slLweg.jpeg",
-        
-          },
-          {
-            title: "Hungergame",
-            poster: "https://m.media-amazon.com/images/M/MV5BMTM0NjQ4OTgyNV5BMl5BanBnXkFtZTcwOTU2MzQ4Nw@@._V1_CR0,60,640,360_AL_UX477_CR0,0,477,268_AL_.jpg"
-          }
-        
-        ]
-      })
-    }, 5000)
+    fetch('https://yts.lt/api/v2/list_movies.json?sort_by=rating')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err=> console.log(err))
   }
 
   _renderMovies = () => {
