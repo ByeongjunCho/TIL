@@ -26,6 +26,7 @@ def get_code(N, M):
                     tmp_bin = a + tmp_bin
                     j -= 1
                 tmp_bin = int(tmp_bin, 2)
+                
 
                 while tmp_bin & 1 == 0:
                     tmp_bin = tmp_bin >> 1

@@ -93,18 +93,3 @@ for tc in range(1, int(input()) + 1):
     N, K = map(int, input().split())   # 행렬 크기, 깎을 수 있는 높이
     visit = [[0 for _ in range(N)] for _ in range(N)]
     arr = [list(map(int, input().split())) for _ in range(N)]
-    MAX = 0
-    MAX_count = 0
-    for a in arr:
-        MAX = max(MAX, max(a))
-    for i in range(N):
-        for j in range(N):
-            if arr[i][j] == MAX:
-                MAX_count += 1
-
-    result = 0
-    # 공사없이 수행
-
-
-
-    print('#{} {}'.format(tc, result))
